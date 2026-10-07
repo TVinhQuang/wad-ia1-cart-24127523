@@ -1,0 +1,6 @@
+Injected one trailing space into src/cart.js for this temporary check.
+Expected exit: 1; actual exit: 1
+src\cart.js:1: trailing whitespace
+Original source restored byte-for-byte.
+Expected exit after restoring: 0; actual exit: 0
+Format checks passed for 7 files

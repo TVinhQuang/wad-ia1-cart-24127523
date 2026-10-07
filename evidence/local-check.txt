@@ -1,0 +1,40 @@
+
+> cart-starter@1.0.0 check
+> npm run format:check && npm test
+
+
+> cart-starter@1.0.0 format:check
+> node scripts/check-format.js
+
+Format checks passed for 7 files
+
+> cart-starter@1.0.0 test
+> node --test
+
+✔ the example from the slides (0.727ms)
+✔ returns a number (0.0931ms)
+✔ charges shipping just below the threshold (0.0819ms)
+✔ gives free shipping exactly at the threshold (0.0798ms)
+✔ gives free shipping just above the threshold (0.0731ms)
+✔ uses the subtotal before VAT to determine free shipping (0.0863ms)
+✔ returns zero for an empty cart without requiring shipping options (0.0717ms)
+✔ accepts a zero price and charges shipping for a nonempty cart (0.0589ms)
+✔ throws RangeError for a negative price later in the cart (0.2971ms)
+✔ throws RangeError when qty is zero (0.1578ms)
+✔ throws RangeError when qty is negative (0.0676ms)
+✔ throws RangeError when qty is fractional (0.0545ms)
+✔ throws RangeError when qty is a numeric string (0.0402ms)
+✔ throws RangeError when qty is NaN (0.0375ms)
+✔ throws RangeError when qty is Infinity (0.0487ms)
+✔ rounds the final total down to whole dong (0.0675ms)
+✔ rounds the final total up to whole dong (0.0587ms)
+✔ combines all items before rounding the final total (0.0571ms)
+✔ adds subtotal, VAT, and shipping before rounding once (0.0478ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 235.712

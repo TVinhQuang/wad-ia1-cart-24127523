@@ -39,5 +39,44 @@ Rejected: The assistant excluded tests for invented option defaults or unspecifi
 By hand: No student-written test or harness code has been observed; these files were written by the assistant.
 
 The expanded tests were run against the still-unimplemented function: 0 passed,
-19 failed. See evidence/spec-tests-red.txt. The first local Git checkpoint will
-record these actual files; no earlier commit history is being reconstructed.
+19 failed. See evidence/spec-tests-red.txt. The first local Git checkpoint,
+d63775f, recorded these actual files; no earlier history was reconstructed.
+
+## 2026-10-08 - Implementation and local validation
+
+Tool: Codex.
+Asked for: Implement the working brief and verify the result against the assignment.
+Kept: Pending student review. The assistant wrote a 22-line cartTotal implementation and verified all 19 tests plus the format gate.
+Changed: The assistant used a for-of loop to validate each item before adding its amount, returned early for an empty cart, and rounded only the final total. Captured logs were normalized for UTF-8/LF and trailing whitespace.
+Rejected: The assistant did not use toFixed, did not tax shipping, and did not round VAT per item. These are assistant implementation decisions, not claims about student rejection.
+By hand: No student-written implementation has been observed. The student has supplied identity information but has not yet confirmed code review or oral understanding.
+
+Evidence: src/cart.js, test/cart.test.js, evidence/local-check.txt (19 passed),
+and evidence/format-gate.txt (a deliberately inserted trailing space failed the
+gate; the original source was restored byte-for-byte and then passed).
+
+## 2026-10-08 - Explanation and draft self-assessment
+
+Tool: Codex.
+Asked for: Complete the learning notes and submission documents using actual evidence.
+Kept: Pending student review. The assistant drafted docs/EXPLANATION.md, appended usage instructions to README.md, and prepared SELF_ASSESSMENT_REPORT.md with a proposed total of 92/100.
+Changed: The harness claim is limited to 16/20 because no real CI run is verified. The report explicitly identifies the unverified repository/CI and student-understanding steps.
+Rejected: No automatic 100/100 claim and no claim that local success proves remote CI. These decisions were made by the assistant.
+By hand: No student-written report or completed oral explanation has been observed. The student must review the proposed assessment before submitting.
+
+An assistant reviewer checked implementation, tests, harness and log honesty.
+The reviewer initially questioned the empty-cart test's partial options, then
+withdrew the concern when checked against the exact example on slide 11. The
+student did not perform or claim that review.
+
+## 2026-10-08 - Repository status and local submission draft
+
+Tool: Codex and the computer-use browser tool.
+Asked for: Continue toward a complete submission, including GitHub and CI.
+Kept: Pending student review. The local Git history and instructions for creating an empty GitHub repository are available; a ZIP draft uses the current proposed score of 92.
+Changed: The student confirmed that no repository exists yet. The browser tool returned no available browsers, so repository creation and remote CI remain pending.
+Rejected: The assistant did not invent a repository URL or mark CI as successful.
+By hand: The student confirmed repository status. No student-created repository or completed code review has yet been observed.
+
+The ZIP is a local draft, not a claim that the remote CI requirement or the
+student's final self-assessment has been completed.

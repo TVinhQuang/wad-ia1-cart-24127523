@@ -1,4 +1,4 @@
-﻿
+
 > cart-starter@1.0.0 test
 > node --test
 
@@ -129,9 +129,9 @@ test at test\cart.test.js:50:1
 test at test\cart.test.js:55:1
 ✖ throws RangeError for a negative price later in the cart (0.5458ms)
   AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
-  
+
   Error message:
-  
+
   not implemented
       at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:60:10)
       at Test.runInAsyncScope (node:async_hooks:227:14)
@@ -160,9 +160,9 @@ test at test\cart.test.js:55:1
 test at test\cart.test.js:73:3
 ✖ throws RangeError when qty is zero (0.1814ms)
   AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
-  
+
   Error message:
-  
+
   not implemented
       at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
       at Test.runInAsyncScope (node:async_hooks:227:14)
@@ -191,9 +191,9 @@ test at test\cart.test.js:73:3
 test at test\cart.test.js:73:3
 ✖ throws RangeError when qty is negative (0.092ms)
   AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
-  
+
   Error message:
-  
+
   not implemented
       at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
       at Test.runInAsyncScope (node:async_hooks:227:14)
@@ -222,9 +222,9 @@ test at test\cart.test.js:73:3
 test at test\cart.test.js:73:3
 ✖ throws RangeError when qty is fractional (0.0991ms)
   AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
-  
+
   Error message:
-  
+
   not implemented
       at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
       at Test.runInAsyncScope (node:async_hooks:227:14)
@@ -253,9 +253,9 @@ test at test\cart.test.js:73:3
 test at test\cart.test.js:73:3
 ✖ throws RangeError when qty is a numeric string (0.0814ms)
   AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
-  
+
   Error message:
-  
+
   not implemented
       at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
       at Test.runInAsyncScope (node:async_hooks:227:14)
@@ -284,9 +284,9 @@ test at test\cart.test.js:73:3
 test at test\cart.test.js:73:3
 ✖ throws RangeError when qty is NaN (0.0587ms)
   AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
-  
+
   Error message:
-  
+
   not implemented
       at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
       at Test.runInAsyncScope (node:async_hooks:227:14)
@@ -315,9 +315,9 @@ test at test\cart.test.js:73:3
 test at test\cart.test.js:73:3
 ✖ throws RangeError when qty is Infinity (0.0503ms)
   AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
-  
+
   Error message:
-  
+
   not implemented
       at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
       at Test.runInAsyncScope (node:async_hooks:227:14)

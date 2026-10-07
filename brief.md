@@ -22,6 +22,8 @@ dependency-free quality gate, then document the actual work and its evidence.
   scripts/check-format.js, and .github/workflows/ci.yml for the harness.
 - Maintain brief.md, AI-LOG.md, SELF_ASSESSMENT_REPORT.md, README.md,
   docs/EXPLANATION.md, and evidence/ for instructions and honest evidence.
+- Prepare a local submission ZIP under output/ from the final tracked files;
+  identify it as a draft while remote CI or student review is pending.
 - Preserve the original assignment specification in README.md; append project
   instructions without changing the specification.
 - Do not edit the supplied teaching documents, change the public function
