@@ -70,3 +70,20 @@ the log as work happens. Explain the code for student review before submission.
 Only claim evidence that actually exists. Keep CI, repository publication, and
 student oral understanding pending until each has been verified. The final ZIP
 name must use the total actually claimed in the self-assessment.
+
+## Rubric traceability - review on 2026-10-08
+
+This section was added during the later assessment review; it does not claim to
+be part of the original student prompt. The original working brief is preserved
+in commit d63775f and evidence/planning-and-tests.diff, before implementation.
+
+| Brief criterion | Where it is specified |
+| --- | --- |
+| Files the assistant may touch | Scope lists the implementation, tests, harness and submission documents; it also excludes teaching documents and unrelated features. |
+| Input/output contract | Contract defines items/options, subtotal, VAT, shipping, rounding and numeric return type; Acceptance gives the worked example and expected total. |
+| Error cases | Contract requires RangeError for negative price and any qty that is not a positive integer; it distinguishes a valid zero price from an empty cart. |
+| No dependencies | Scope and Acceptance prohibit both runtime and development dependencies and require Node built-ins. |
+
+The original brief can be compared with evidence/implementation.diff and the
+named tests in test/cart.test.js. This mapping explains the claimed rubric band;
+it does not replace the student's responsibility to understand the submitted work.

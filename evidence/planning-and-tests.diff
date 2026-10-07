@@ -1,0 +1,305 @@
+d63775ff269f6a27f08c0718122e70cea9382de5 chore: add assignment brief, quality harness and failing specification tests
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+new file mode 100644
+index 0000000..1a319cb
+--- /dev/null
++++ b/.github/workflows/ci.yml
+@@ -0,0 +1,22 @@
++name: Quality checks
++
++on: [push, pull_request]
++
++permissions:
++  contents: read
++
++jobs:
++  check:
++    runs-on: ubuntu-latest
++    timeout-minutes: 5
++    strategy:
++      matrix:
++        node: [22, 24]
++    steps:
++      - uses: actions/checkout@v6
++      - uses: actions/setup-node@v7
++        with:
++          node-version: ${{ matrix.node }}
++          package-manager-cache: false
++      - name: Check formatting and tests
++        run: npm run check
+diff --git a/AGENTS.md b/AGENTS.md
+new file mode 100644
+index 0000000..4d21043
+--- /dev/null
++++ b/AGENTS.md
+@@ -0,0 +1,15 @@
++# Project rules - IA#1 cartTotal
++
++- Stack: JavaScript ES modules, Node.js 22 or newer, npm 10 or newer.
++- Contract: follow README.md; export cartTotal(items, options) from src/cart.js.
++- Style: two-space indentation, named exports, single quotes, no semicolons.
++- Commands: npm test; npm run format:check; npm run check (both gates).
++- Windows PowerShell: use npm.cmd if the npm.ps1 execution policy blocks npm.
++- Tests: use node:test and node:assert/strict in test/cart.test.js.
++- Each test checks one behaviour from the specification with an independent expected value.
++- Round only the final total. Free shipping uses the subtotal before VAT.
++- Never add runtime or development dependencies, or silently change the contract.
++- Never commit .env, secrets, node_modules, or claim an unverified CI run.
++- Keep changes within the scope in brief.md; review changes before running them.
++- Update AI-LOG.md during the work; distinguish assistant work from student work.
++- Self-assessment must cite actual files, test names, or successful CI runs.
+diff --git a/brief.md b/brief.md
+new file mode 100644
+index 0000000..0998ee9
+--- /dev/null
++++ b/brief.md
+@@ -0,0 +1,70 @@
++# Brief - IA#1 cartTotal
++
++## Context and provenance
++
++Student: 24127523 - Tran Vinh Quang (Trần Vinh Quang).
++
++On 2026-10-08 the student approved the proposed workflow and asked the assistant
++to begin. This detailed brief was drafted by the assistant from that request,
++README.md, the IA#1 rubric, and the session 2 slides before implementation.
++It is the working specification for the implementation that follows; it is not
++a verbatim earlier student prompt.
++
++## Task
++
++Implement cartTotal(items, options), with specification-based tests and a small,
++dependency-free quality gate, then document the actual work and its evidence.
++
++## Scope
++
++- Implement src/cart.js and extend test/cart.test.js.
++- Configure package.json, AGENTS.md, .editorconfig, .gitattributes, .gitignore,
++  scripts/check-format.js, and .github/workflows/ci.yml for the harness.
++- Maintain brief.md, AI-LOG.md, SELF_ASSESSMENT_REPORT.md, README.md,
++  docs/EXPLANATION.md, and evidence/ for instructions and honest evidence.
++- Preserve the original assignment specification in README.md; append project
++  instructions without changing the specification.
++- Do not edit the supplied teaching documents, change the public function
++  signature, introduce a UI/server/database, or add any dependencies.
++
++## Contract
++
++- Input items is an array of objects with name, price, and qty.
++- Input options contains vatRate, freeShipFrom, and shipFee.
++- subtotal is the sum of price * qty for every item.
++- VAT is subtotal * vatRate; shipping is not taxed.
++- Shipping is 0 if subtotal >= freeShipFrom, otherwise options.shipFee.
++- Return subtotal + VAT + shipping as a number, rounded to whole dong once,
++  after all components have been added.
++- An empty items array returns 0 without charging VAT or shipping.
++- A negative price throws RangeError.
++- A qty that is not a positive integer throws RangeError, including zero,
++  negative, fractional, or non-number quantities.
++- Zero price is valid. Do not invent validation rules or option defaults beyond
++  the supplied contract.
++
++## Acceptance and verification
++
++- Preserve the worked example: 2 * 180000 + 45000, with VAT 0.08,
++  freeShipFrom 500000, shipFee 30000, returns the number 467400.
++- Test empty carts, shipping below/at/above the threshold, and a subtotal whose
++  VAT-inclusive amount exceeds the threshold but still owes shipping.
++- Test negative prices and invalid quantities independently.
++- Test rounding down/up and the numeric return type using explicit expected
++  values. Do not copy the implementation formula into test assertions.
++- Use only Node built-ins; no production or development dependencies.
++- npm test and npm run format:check must pass locally.
++- The format gate checks source indentation and text whitespace; it is not a
++  general-purpose JavaScript linter.
++- GitHub Actions runs both gates on push and pull_request, using Node 22 and 24.
++  A workflow file alone is not proof of a successful remote run.
++
++## Working process
++
++Observe and record the failing starter test; write rules and this brief; add
++tests and observe them fail; implement; review changes; run the gates; update
++the log as work happens. Explain the code for student review before submission.
++
++Only claim evidence that actually exists. Keep CI, repository publication, and
++student oral understanding pending until each has been verified. The final ZIP
++name must use the total actually claimed in the self-assessment.
+diff --git a/package.json b/package.json
+new file mode 100644
+index 0000000..76f1238
+--- /dev/null
++++ b/package.json
+@@ -0,0 +1,14 @@
++{
++  "name": "cart-starter",
++  "version": "1.0.0",
++  "type": "module",
++  "engines": {
++    "node": ">=22",
++    "npm": ">=10"
++  },
++  "scripts": {
++    "test": "node --test",
++    "format:check": "node scripts/check-format.js",
++    "check": "npm run format:check && npm test"
++  }
++}
+diff --git a/scripts/check-format.js b/scripts/check-format.js
+new file mode 100644
+index 0000000..f30ba46
+--- /dev/null
++++ b/scripts/check-format.js
+@@ -0,0 +1,43 @@
++import { readdirSync, readFileSync } from 'node:fs'
++import { join } from 'node:path'
++
++function collectJavaScriptFiles(directory) {
++  return readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
++    const file = join(directory, entry.name)
++    if (entry.isDirectory()) return collectJavaScriptFiles(file)
++    return entry.isFile() && file.endsWith('.js') ? [file] : []
++  })
++}
++
++const files = [
++  ...collectJavaScriptFiles('src'),
++  ...collectJavaScriptFiles('test'),
++  ...collectJavaScriptFiles('scripts'),
++  'package.json',
++  '.editorconfig',
++  '.gitattributes',
++  '.github/workflows/ci.yml'
++].sort()
++const problems = []
++
++for (const file of files) {
++  // Accept Windows checkouts while applying the same checks to each line.
++  const text = readFileSync(file, 'utf8').replace(/\r\n/g, '\n')
++  if (!text.endsWith('\n')) problems.push(`${file}: missing final newline`)
++
++  for (const [index, line] of text.split('\n').entries()) {
++    const location = `${file}:${index + 1}`
++    if (line.includes('\t')) problems.push(`${location}: use spaces, not tabs`)
++    if (/\s$/.test(line)) problems.push(`${location}: trailing whitespace`)
++    if (file.endsWith('.js') && line.match(/^ */)[0].length % 2 !== 0) {
++      problems.push(`${location}: indentation must use multiples of two spaces`)
++    }
++  }
++}
++
++if (problems.length > 0) {
++  console.error(problems.join('\n'))
++  process.exitCode = 1
++} else {
++  console.log(`Format checks passed for ${files.length} files`)
++}
+diff --git a/test/cart.test.js b/test/cart.test.js
+new file mode 100644
+index 0000000..2f577fe
+--- /dev/null
++++ b/test/cart.test.js
+@@ -0,0 +1,104 @@
++import { test } from 'node:test'
++import assert from 'node:assert/strict'
++import { cartTotal } from '../src/cart.js'
++
++const standardOptions = { vatRate: 0.08, freeShipFrom: 500000, shipFee: 30000 }
++
++// This test fails until you implement cartTotal. That is the point:
++// run `npm test` first and see it red.
++test('the example from the slides', () => {
++  const items = [
++    { name: 'Áo thun', price: 180000, qty: 2 },
++    { name: 'Sổ tay', price: 45000, qty: 1 },
++  ]
++  const options = { vatRate: 0.08, freeShipFrom: 500000, shipFee: 30000 }
++  assert.equal(cartTotal(items, options), 467400)
++})
++
++test('returns a number', () => {
++  const items = [{ name: 'Sổ tay', price: 45000, qty: 1 }]
++  assert.equal(typeof cartTotal(items, standardOptions), 'number')
++})
++
++test('charges shipping just below the threshold', () => {
++  const items = [{ name: 'Item', price: 499999, qty: 1 }]
++  const options = { vatRate: 0, freeShipFrom: 500000, shipFee: 30000 }
++  assert.equal(cartTotal(items, options), 529999)
++})
++
++test('gives free shipping exactly at the threshold', () => {
++  const items = [{ name: 'Item', price: 500000, qty: 1 }]
++  const options = { vatRate: 0, freeShipFrom: 500000, shipFee: 30000 }
++  assert.equal(cartTotal(items, options), 500000)
++})
++
++test('gives free shipping just above the threshold', () => {
++  const items = [{ name: 'Item', price: 500001, qty: 1 }]
++  const options = { vatRate: 0, freeShipFrom: 500000, shipFee: 30000 }
++  assert.equal(cartTotal(items, options), 500001)
++})
++
++test('uses the subtotal before VAT to determine free shipping', () => {
++  const items = [{ name: 'Item', price: 470000, qty: 1 }]
++  assert.equal(cartTotal(items, standardOptions), 537600)
++})
++
++test('returns zero for an empty cart without requiring shipping options', () => {
++  assert.equal(cartTotal([], { vatRate: 0.08 }), 0)
++})
++
++test('accepts a zero price and charges shipping for a nonempty cart', () => {
++  const items = [{ name: 'Free item', price: 0, qty: 1 }]
++  assert.equal(cartTotal(items, standardOptions), 30000)
++})
++
++test('throws RangeError for a negative price later in the cart', () => {
++  const items = [
++    { name: 'Valid item', price: 180000, qty: 1 },
++    { name: 'Invalid item', price: -1, qty: 1 },
++  ]
++  assert.throws(() => cartTotal(items, standardOptions), RangeError)
++})
++
++const invalidQuantities = [
++  ['zero', 0],
++  ['negative', -1],
++  ['fractional', 1.5],
++  ['a numeric string', '2'],
++  ['NaN', NaN],
++  ['Infinity', Infinity],
++]
++
++for (const [description, qty] of invalidQuantities) {
++  test(`throws RangeError when qty is ${description}`, () => {
++    const items = [{ name: 'Invalid quantity', price: 45000, qty }]
++    assert.throws(() => cartTotal(items, standardOptions), RangeError)
++  })
++}
++
++test('rounds the final total down to whole dong', () => {
++  const items = [{ name: 'Item', price: 101, qty: 1 }]
++  const options = { vatRate: 0.08, freeShipFrom: 0, shipFee: 0 }
++  assert.equal(cartTotal(items, options), 109)
++})
++
++test('rounds the final total up to whole dong', () => {
++  const items = [{ name: 'Item', price: 107, qty: 1 }]
++  const options = { vatRate: 0.08, freeShipFrom: 0, shipFee: 0 }
++  assert.equal(cartTotal(items, options), 116)
++})
++
++test('combines all items before rounding the final total', () => {
++  const items = [
++    { name: 'First item', price: 4, qty: 1 },
++    { name: 'Second item', price: 4, qty: 1 },
++  ]
++  const options = { vatRate: 0.08, freeShipFrom: 0, shipFee: 0 }
++  assert.equal(cartTotal(items, options), 9)
++})
++
++test('adds subtotal, VAT, and shipping before rounding once', () => {
++  const items = [{ name: 'Item', price: 10.2, qty: 1 }]
++  const options = { vatRate: 0.02, freeShipFrom: 100, shipFee: 0.2 }
++  assert.equal(cartTotal(items, options), 11)
++})

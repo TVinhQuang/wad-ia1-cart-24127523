@@ -9,6 +9,8 @@ npm 11.17.0. These are local checks, not GitHub Actions runs.
 | spec-tests-red.txt | Expanded suite with the same stub: 19 tests failed |
 | local-check.txt | npm.cmd run check: format passed; 19 tests passed |
 | format-gate.txt | One temporary trailing space caused exit 1; restoring the original file produced exit 0 |
+| planning-and-tests.diff | Actual Git export of the brief, rules, harness and tests from pre-implementation commit d63775f |
+| implementation.diff | Actual src/cart.js diff from d63775f (stub) to bce623c (implemented) |
 | ci-status.md | Remote CI status and missing evidence |
 
 PowerShell's npm.cmd was used to avoid its npm.ps1 execution-policy issue.
@@ -23,3 +25,9 @@ The first local Git commit, d63775f, records the harness, working brief, and red
 specification tests while the function was still a stub. It does not claim an
 earlier starter commit or any remote run. Review `git log --oneline` for the
 subsequent implementation and documentation checkpoints.
+
+The two .diff files were exported on 2026-10-08 during the student's requested
+assessment review. They use zero context lines and no color, with LF line endings;
+their code changes were not rewritten. The planning export includes the original
+commit hash and subject. These exports supplement the test logs so the ZIP
+remains reviewable without .git.
