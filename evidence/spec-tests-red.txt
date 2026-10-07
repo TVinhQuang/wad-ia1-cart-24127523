@@ -1,0 +1,392 @@
+﻿
+> cart-starter@1.0.0 test
+> node --test
+
+✖ the example from the slides (0.654ms)
+✖ returns a number (0.0893ms)
+✖ charges shipping just below the threshold (0.059ms)
+✖ gives free shipping exactly at the threshold (0.0563ms)
+✖ gives free shipping just above the threshold (0.0708ms)
+✖ uses the subtotal before VAT to determine free shipping (0.0614ms)
+✖ returns zero for an empty cart without requiring shipping options (0.0559ms)
+✖ accepts a zero price and charges shipping for a nonempty cart (0.0455ms)
+✖ throws RangeError for a negative price later in the cart (0.5458ms)
+✖ throws RangeError when qty is zero (0.1814ms)
+✖ throws RangeError when qty is negative (0.092ms)
+✖ throws RangeError when qty is fractional (0.0991ms)
+✖ throws RangeError when qty is a numeric string (0.0814ms)
+✖ throws RangeError when qty is NaN (0.0587ms)
+✖ throws RangeError when qty is Infinity (0.0503ms)
+✖ rounds the final total down to whole dong (0.0645ms)
+✖ rounds the final total up to whole dong (0.0533ms)
+✖ combines all items before rounding the final total (0.0491ms)
+✖ adds subtotal, VAT, and shipping before rounding once (0.0437ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 0
+ℹ fail 19
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 240.4864
+
+✖ failing tests:
+
+test at test\cart.test.js:9:1
+✖ the example from the slides (0.654ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:15:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at test\cart.test.js:18:1
+✖ returns a number (0.0893ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:20:23)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at test\cart.test.js:23:1
+✖ charges shipping just below the threshold (0.059ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:26:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at test\cart.test.js:29:1
+✖ gives free shipping exactly at the threshold (0.0563ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:32:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at test\cart.test.js:35:1
+✖ gives free shipping just above the threshold (0.0708ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:38:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at test\cart.test.js:41:1
+✖ uses the subtotal before VAT to determine free shipping (0.0614ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:43:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at test\cart.test.js:46:1
+✖ returns zero for an empty cart without requiring shipping options (0.0559ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:47:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at test\cart.test.js:50:1
+✖ accepts a zero price and charges shipping for a nonempty cart (0.0455ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:52:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at test\cart.test.js:55:1
+✖ throws RangeError for a negative price later in the cart (0.5458ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+  
+  Error message:
+  
+  not implemented
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:60:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+        at file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:60:23
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:60:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1382:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+        at Test.postRun (node:internal/test_runner/test:1522:19)
+        at Test.run (node:internal/test_runner/test:1447:12),
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test\cart.test.js:73:3
+✖ throws RangeError when qty is zero (0.1814ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+  
+  Error message:
+  
+  not implemented
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+        at file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:25
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1382:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+        at Test.postRun (node:internal/test_runner/test:1522:19)
+        at Test.run (node:internal/test_runner/test:1447:12),
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test\cart.test.js:73:3
+✖ throws RangeError when qty is negative (0.092ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+  
+  Error message:
+  
+  not implemented
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+        at file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:25
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1382:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+        at Test.postRun (node:internal/test_runner/test:1522:19)
+        at Test.run (node:internal/test_runner/test:1447:12),
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test\cart.test.js:73:3
+✖ throws RangeError when qty is fractional (0.0991ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+  
+  Error message:
+  
+  not implemented
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+        at file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:25
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1382:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+        at Test.postRun (node:internal/test_runner/test:1522:19)
+        at Test.run (node:internal/test_runner/test:1447:12),
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test\cart.test.js:73:3
+✖ throws RangeError when qty is a numeric string (0.0814ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+  
+  Error message:
+  
+  not implemented
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+        at file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:25
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1382:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+        at Test.postRun (node:internal/test_runner/test:1522:19)
+        at Test.run (node:internal/test_runner/test:1447:12),
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test\cart.test.js:73:3
+✖ throws RangeError when qty is NaN (0.0587ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+  
+  Error message:
+  
+  not implemented
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+        at file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:25
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1382:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+        at Test.postRun (node:internal/test_runner/test:1522:19)
+        at Test.run (node:internal/test_runner/test:1447:12),
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test\cart.test.js:73:3
+✖ throws RangeError when qty is Infinity (0.0503ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+  
+  Error message:
+  
+  not implemented
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+        at file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:25
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:75:12)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1382:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+        at Test.postRun (node:internal/test_runner/test:1522:19)
+        at Test.run (node:internal/test_runner/test:1447:12),
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test\cart.test.js:79:1
+✖ rounds the final total down to whole dong (0.0645ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:82:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at test\cart.test.js:85:1
+✖ rounds the final total up to whole dong (0.0533ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:88:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at test\cart.test.js:91:1
+✖ combines all items before rounding the final total (0.0491ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:97:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at test\cart.test.js:100:1
+✖ adds subtotal, VAT, and shipping before rounding once (0.0437ms)
+  Error: not implemented
+      at cartTotal (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/src/cart.js:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/Admin/OneDrive%20-%20VNU-HCMUS/Documents/Ph%C3%A1t%20tri%E1%BB%83n%20%E1%BB%A9ng%20d%E1%BB%A5ng%20web/wad-cart-starter-main/test/cart.test.js:103:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
