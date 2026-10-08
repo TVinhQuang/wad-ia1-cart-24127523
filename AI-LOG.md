@@ -150,17 +150,10 @@ The student's initial test run is recorded from their confirmation. The existing
 evidence/initial-test.txt remains the transcript of Codex's separately recorded
 run; it is not presented as a capture of the student's own terminal session.
 No new CI run or independently administered oral review is claimed for this
-documentation update. Commit and push are awaiting the student's approval.
+documentation update.
 
-Update (2026-10-08):
-The student subsequently reviewed and approved the
-documentation changes, then committed and pushed
-them to the GitHub repository.
+Validation: Codex ran `npm.cmd run check` after reviewing the documentation diff. Format checks passed for 7 files; all 19 tests passed, with exit code 0. The score rows and evidence references remained unchanged. Only `AI-LOG.md`, `README.md`, and `SELF_ASSESSMENT_REPORT.md` were modified during this Codex session.
 
-The earlier pending-approval statement reflects
-the status at that time and is retained as history.
+Commit and Push: At the end of the Codex session, the documentation changes were awaiting the student's approval. Codex did not perform any commit or push.
 
-Validation: Codex ran npm.cmd run check after reviewing the documentation diff.
-Format checks passed for 7 files; all 19 tests passed, with exit code 0. The
-score rows and evidence references are unchanged. Only AI-LOG.md, README.md
-and SELF_ASSESSMENT_REPORT.md changed; no commit or push was performed.
+Follow-up (2026-10-08): The student subsequently reviewed and approved the documentation changes, then personally committed and pushed them to the GitHub repository. This follow-up records a later student action and does not imply that Codex performed the commit or push.
