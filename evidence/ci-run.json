@@ -1,0 +1,105 @@
+{
+  "repository": "https://github.com/TVinhQuang/wad-ia1-cart-24127523",
+  "source": "https://api.github.com/repos/TVinhQuang/wad-ia1-cart-24127523/actions/runs/37771408022",
+  "run": {
+    "id": 37771408022,
+    "name": "Quality checks",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "4fef671723c261c452f5358a81c4d4502f746707",
+    "html_url": "https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/runs/37771408022"
+  },
+  "jobs": [
+    {
+      "id": 113291633367,
+      "name": "check (22)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4fef671723c261c452f5358a81c4d4502f746707",
+      "html_url": "https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/runs/37771408022/job/113291633367",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v7",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check formatting and tests",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v7",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 113291633596,
+      "name": "check (24)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4fef671723c261c452f5358a81c4d4502f746707",
+      "html_url": "https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/runs/37771408022/job/113291633596",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v7",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check formatting and tests",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v7",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ]
+}

@@ -67,22 +67,23 @@ On Windows PowerShell, use `npm.cmd` instead of `npm` if execution policy blocks
 - [AI usage log](AI-LOG.md) and [draft self-assessment](SELF_ASSESSMENT_REPORT.md).
 - [Recorded checks](evidence/README.md) and [remote CI status](evidence/ci-status.md).
 
-The local check passed on Node 24 with 19 tests. Remote CI is pending until a
-submission repository is supplied and its workflow actually runs successfully.
-The report and proposed mark need the student's review before submission.
+The local check passed on Node 24 with 19 tests. GitHub Actions also passed on
+Node 22 and Node 24; see the recorded run below and evidence/ci-run.json.
+The report and proposed mark still need the student's review before submission.
 
 For submission, include this project, its repository link, brief, AI log, and
 self-assessment in `24127523_<total>.zip`. The report must be at the ZIP root.
 Keep the total consistent with the report. Check the deadline on Classroom.
 
-## Create the submission repository
+## Submission repository and CI
 
-Open https://github.com/new while signed in. Suggested name:
-`wad-ia1-cart-24127523`. Select visibility according to the course's requirements.
-Keep the new repository empty: do not generate a README, .gitignore or license,
-because this local project already has its own files and Git history.
+- Repository: https://github.com/TVinhQuang/wad-ia1-cart-24127523
+- Recorded successful push run: https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/runs/37771408022
+- Verified commit: `4fef671723c261c452f5358a81c4d4502f746707`.
+- Workflow history: https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/workflows/ci.yml
 
-After creation, copy the repository URL. Connect it as `origin` and push `main`.
-In the repository's Actions tab, verify that the `Quality checks` workflow is
-green for both Node 22 and Node 24. Add the repository/run links to the evidence
-and update the report before preparing the final submission ZIP.
+The recorded run verified both matrix jobs and their formatting/test step.
+The current proposed self-assessment is 100/100, so the matching ZIP is
+`24127523_100.zip`. This is a proposed self-score, subject to student review and
+the teacher's assessment. After any future change, inspect its own CI result
+before submitting that version.

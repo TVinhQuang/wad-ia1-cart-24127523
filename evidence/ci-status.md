@@ -1,24 +1,32 @@
 # Remote CI status
 
-Status: pending - no remote run has been observed.
+Status: verified success for the recorded push run below.
 
-- Local branch: main.
-- Submission repository URL: the student confirmed that no repository has been created yet.
-- Git remote: not configured yet.
-- Workflow: .github/workflows/ci.yml.
-- Trigger: push and pull_request.
-- Jobs: npm run check on Node 22 and Node 24, Ubuntu runner.
-- Successful run URL and commit: pending.
+- Repository: https://github.com/TVinhQuang/wad-ia1-cart-24127523
+- Remote origin: https://github.com/TVinhQuang/wad-ia1-cart-24127523.git
+- Branch: main.
+- Workflow: .github/workflows/ci.yml (Quality checks).
+- Configured triggers: push and pull_request.
+- Observed event: push.
+- Verified commit: 4fef671723c261c452f5358a81c4d4502f746707.
+- Run: https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/runs/37771408022
+- Run status: completed; conclusion: success.
 
-Local Node 24 results are in local-check.txt. They do not prove that either
-GitHub Actions job ran. Do not claim the top harness band until the real remote
-run is successful.
+| Job | Result | Evidence |
+| --- | --- | --- |
+| Node 22 | completed / success | [check (22)](https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/runs/37771408022/job/113291633367) |
+| Node 24 | completed / success | [check (24)](https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/runs/37771408022/job/113291633596) |
 
-The assistant attempted to open GitHub on 2026-10-08. The browser inventory was
-empty and the in-app browser was unavailable, so no GitHub repository was
-created through the tools. The student can create an empty repository at
-https://github.com/new and provide its URL to continue.
+Both jobs successfully executed the step `Check formatting and tests`, which
+runs `npm run check` (format:check followed by npm test). The run and job SHA,
+event, conclusions and step results were checked through GitHub's REST API.
+The selected API fields are saved in ci-run.json for review inside the ZIP.
 
-After the student provides the repository, push the reviewed commits, inspect
-the Actions run for both Node versions, and replace this status with the actual
-repository/run links and commit. Then update the self-assessment if warranted.
+This record refers to the exact commit above. It provides remote evidence for
+the implementation, tests and harness. Subsequent evidence/report-only commits
+do not change those checked files; their own runs can be inspected on the
+[workflow page](https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/workflows/ci.yml).
+
+Earlier entries in AI-LOG.md correctly record that no remote run existed at
+those stages. The student supplied this repository URL on 2026-10-08, after
+which the assistant configured origin, pushed main and verified these results.

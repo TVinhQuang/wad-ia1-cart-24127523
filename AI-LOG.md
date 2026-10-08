@@ -96,5 +96,24 @@ actual src/cart.js change from d63775f to bce623c. These files let a reviewer
 inspect the changes in a ZIP without needing its .git directory.
 
 The earlier 92-point entries above describe the earlier draft accurately. The
-current proposed total is 96 (30 + 20 + 16 + 15 + 15); student review and remote
-CI remain pending. The proposed marks are not a guarantee of the teacher's marks.
+proposed total at that stage was 96 (30 + 20 + 16 + 15 + 15); student review and
+remote CI were pending. Proposed marks are not a guarantee of the teacher's marks.
+
+## 2026-10-08 - Repository publication and verified remote CI
+
+Tool: Codex, Git CLI, and GitHub REST API.
+Asked for: Continue publication and CI after the student supplied https://github.com/TVinhQuang/wad-ia1-cart-24127523.git and said the repository had been created.
+Kept: The existing implementation, 19 tests and harness were pushed unchanged. Both Node 22 and Node 24 jobs completed successfully, including their Check formatting and tests step.
+Changed: The assistant added origin, pushed main, saved API evidence in evidence/ci-run.json, and updated README.md, evidence/ci-status.md and the report with actual links. Harness increased from the provisional 16/20 to proposed 20/20, making the proposed total 100/100.
+Rejected: None. No failed CI output or generated code was discarded in this step.
+By hand: The student supplied the repository URL and reported creating it. The assistant performed the connection, push and CI verification. No student code review or oral explanation is claimed.
+
+Verified push run: https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/runs/37771408022
+Verified commit: 4fef671723c261c452f5358a81c4d4502f746707.
+Both job names, SHAs, conclusions and the check step were verified against the
+API, not inferred from the existence of the workflow file or local success.
+
+The previous 92/96-point entries remain a record of earlier incomplete stages.
+The updated report and ZIP use proposed total 100; final student assessment and
+ability to explain the work remain pending. Changes after the recorded run are
+limited to publication/evidence documents and preserve the tested source files.

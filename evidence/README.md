@@ -1,7 +1,8 @@
 # Evidence recorded on 2026-10-08
 
-Recorded by the assistant on the student's Windows workspace, Node v24.19.0,
-npm 11.17.0. These are local checks, not GitHub Actions runs.
+The local text logs were recorded by the assistant on the student's Windows
+workspace, Node v24.19.0, npm 11.17.0. Separate remote CI evidence is recorded
+in ci-status.md and ci-run.json from the actual GitHub Actions run.
 
 | File | Actual observation |
 | --- | --- |
@@ -11,7 +12,8 @@ npm 11.17.0. These are local checks, not GitHub Actions runs.
 | format-gate.txt | One temporary trailing space caused exit 1; restoring the original file produced exit 0 |
 | planning-and-tests.diff | Actual Git export of the brief, rules, harness and tests from pre-implementation commit d63775f |
 | implementation.diff | Actual src/cart.js diff from d63775f (stub) to bce623c (implemented) |
-| ci-status.md | Remote CI status and missing evidence |
+| ci-status.md | Repository, exact commit, run URL and successful Node 22/24 job links |
+| ci-run.json | Selected GitHub REST API fields confirming the push run and both jobs succeeded |
 
 PowerShell's npm.cmd was used to avoid its npm.ps1 execution-policy issue.
 The format smoke check invoked the same Node script as npm run format:check.
