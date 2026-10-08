@@ -152,6 +152,14 @@ run; it is not presented as a capture of the student's own terminal session.
 No new CI run or independently administered oral review is claimed for this
 documentation update. Commit and push are awaiting the student's approval.
 
+Update (2026-10-08):
+The student subsequently reviewed and approved the
+documentation changes, then committed and pushed
+them to the GitHub repository.
+
+The earlier pending-approval statement reflects
+the status at that time and is retained as history.
+
 Validation: Codex ran npm.cmd run check after reviewing the documentation diff.
 Format checks passed for 7 files; all 19 tests passed, with exit code 0. The
 score rows and evidence references are unchanged. Only AI-LOG.md, README.md
