@@ -64,12 +64,15 @@ On Windows PowerShell, use `npm.cmd` instead of `npm` if execution policy blocks
 
 - [Project rules](AGENTS.md) and [working brief](brief.md).
 - [Code and test explanation in Vietnamese](docs/EXPLANATION.md).
-- [AI usage log](AI-LOG.md) and [draft self-assessment](SELF_ASSESSMENT_REPORT.md).
+- [AI usage log](AI-LOG.md) and [self-assessment](SELF_ASSESSMENT_REPORT.md).
 - [Recorded checks](evidence/README.md) and [remote CI status](evidence/ci-status.md).
 
 The local check passed on Node 24 with 19 tests. GitHub Actions also passed on
 Node 22 and Node 24; see the recorded run below and evidence/ci-run.json.
-The report and proposed mark still need the student's review before submission.
+On 2026-10-08 the student confirmed personal code/test review, completion of all
+8 self-review questions, and understanding of the implementation and its design
+decisions. See Student Review in SELF_ASSESSMENT_REPORT.md and the separate
+ChatGPT, Codex and student contributions in AI-LOG.md.
 
 For submission, include this project, its repository link, brief, AI log, and
 self-assessment in `24127523_<total>.zip`. The report must be at the ZIP root.
@@ -83,7 +86,7 @@ Keep the total consistent with the report. Check the deadline on Classroom.
 - Workflow history: https://github.com/TVinhQuang/wad-ia1-cart-24127523/actions/workflows/ci.yml
 
 The recorded run verified both matrix jobs and their formatting/test step.
-The current proposed self-assessment is 100/100, so the matching ZIP is
-`24127523_100.zip`. This is a proposed self-score, subject to student review and
-the teacher's assessment. After any future change, inspect its own CI result
-before submitting that version.
+The unchanged claimed self-assessment is 100/100, so the matching ZIP is
+`24127523_100.zip`. The teacher determines the final mark. Include the latest
+reviewed documents when refreshing the submission ZIP. After any future push,
+inspect its own CI result before submitting that version.
