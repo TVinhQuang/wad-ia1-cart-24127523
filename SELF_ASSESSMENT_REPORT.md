@@ -2,14 +2,14 @@
 
 Submitted by: 24127523 - Trần Vinh Quang
 
-Status: DRAFT prepared with Codex on 2026-10-08. The scores below are an
-assistant proposal for the published and verified result and need student review
-before submission. They are not a teacher-awarded mark. Repository publication
-and both remote CI jobs have been verified; student code review remains pending.
+Status: Student personal review completed and confirmed on 2026-10-08.
+Prepared with Codex, with ChatGPT assistance for learning, planning and review.
+Repository publication and both recorded remote CI jobs have been verified.
+The rubric-based scores below are unchanged and are not a teacher-awarded mark.
 
 Repository: https://github.com/TVinhQuang/wad-ia1-cart-24127523
 
-Total I claim: 100 / 100 (proposed; pending student review)
+Total I claim: 100 / 100
 
 | Criterion | Max | I claim | Evidence |
 | --- | ---: | ---: | --- |
@@ -22,8 +22,25 @@ Total I claim: 100 / 100 (proposed; pending student review)
 The Brief and AI-LOG claims use the top rubric band because the listed
 requirements have specific evidence. The rubric does not prescribe a deduction
 for heavy assistant use or require a minimum quantity of student-written code.
-Student review and ability to explain the work remain separate obligations,
-not completed actions. The final mark within each band belongs to the teacher.
+The student's completed personal review is recorded below. The final mark
+within each band belongs to the teacher.
+
+## Student Review
+
+On 2026-10-08, I confirmed that I have:
+
+- Independently read and reviewed the project's source code.
+- Studied and understood cartTotal's calculations, validation rules and error
+  handling, and can explain the implementation and its design decisions.
+- Reviewed the test cases and understood their purposes.
+- Studied and answered all 8 self-review questions in docs/EXPLANATION.md.
+- Reviewed the completed work and taken responsibility for acceptance decisions.
+
+I also confirm that I ran the initial failing test. These personal activities
+are recorded from my confirmation; the existing evidence/initial-test.txt is
+the transcript of Codex's separately recorded run. Codex generated the code,
+tests, harness and repository documentation. ChatGPT provided learning,
+planning and review guidance. I do not claim manual authorship of that code.
 
 ## What I did not manage
 
@@ -33,9 +50,9 @@ The recorded run identifies its exact commit; later changes in this submission
 only add the observed CI evidence and update the report/log, leaving checked
 code, tests and harness unchanged.
 
-The code and harness were written by the assistant. The student's ability to
-explain every line has not yet been checked. docs/EXPLANATION.md contains study
-notes and questions; reading/answering them must be recorded only after it occurs.
+No outstanding implementation, testing or harness gap has been identified
+against the assignment requirements. The earlier requirements-discussion log
+was recorded retrospectively, as explicitly disclosed in AI-LOG.md.
 
 ## What I would do differently
 
@@ -45,7 +62,7 @@ so there is time to fix issues on both supported Node versions.
 
 ## Before submitting
 
-The student should review these claims and replace the draft status with an
-honest final assessment. Update the marks only when the corresponding evidence
-exists. With the current proposed total, the ZIP name is 24127523_100.zip; if the
-total changes, the ZIP name must change too. Place this report at the ZIP root.
+Use the latest reviewed documents in the submission ZIP. Keep the score
+supported by its evidence: the unchanged total gives the ZIP name
+24127523_100.zip. If the total changes, update the filename too. Place this
+report at the ZIP root.

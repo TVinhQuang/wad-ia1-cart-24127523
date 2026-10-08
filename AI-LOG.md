@@ -2,8 +2,12 @@
 
 Student: 24127523 - Trần Vinh Quang.
 
-This log records assistant actions separately from student actions. It is a
-summary, not a transcript. Unconfirmed student work is not claimed as completed.
+This log distinguishes ChatGPT's learning, planning and review guidance,
+Codex's repository edits and automated checks, and the student's personal work.
+It is a summary, not a transcript. The ChatGPT assistance and personal review
+in the final entries are recorded from the student's confirmation on 2026-10-08.
+Earlier entries describe the status at each stage; their pending-review notes
+are historical and are superseded by the completed review recorded below.
 
 ## 2026-10-08 - Record of the earlier requirements discussion
 
@@ -114,6 +118,41 @@ Both job names, SHAs, conclusions and the check step were verified against the
 API, not inferred from the existence of the workflow file or local success.
 
 The previous 92/96-point entries remain a record of earlier incomplete stages.
-The updated report and ZIP use proposed total 100; final student assessment and
-ability to explain the work remain pending. Changes after the recorded run are
-limited to publication/evidence documents and preserve the tested source files.
+The report and ZIP at that stage used proposed total 100; final student review
+and confirmation of understanding were still pending then. Changes after the
+recorded run are limited to publication/evidence documents and preserve the
+tested source files.
+
+## 2026-10-08 - ChatGPT learning, planning and review assistance
+
+Tool: ChatGPT.
+Asked for: Help understand the IA#1 requirements, Session 2 slides and rubric; explain cartTotal and its edge cases, project rules, brief, tests, harness and CI; review the completed project and suggest documentation and submission checks.
+Kept: The student used the explanations, planning guidance, AGENTS.md suggestions, rubric-based review and final-submission advice to support learning and personal review.
+Changed: ChatGPT provided suggestions rather than editing repository files. Actual file changes and validation were performed by Codex and are documented in its entries; no direct repository edit is attributed to ChatGPT.
+Rejected: None recorded. No rejected suggestion or manual code modification is claimed.
+By hand: The student confirms running the initial failing test, independently reviewing and understanding the generated implementation and tests, answering all 8 self-review questions, and reviewing the completed work to make acceptance decisions.
+
+This entry records the ChatGPT role as confirmed by the student on 2026-10-08.
+It supplements the existing truthful Codex records without reassigning their
+work or commit references to ChatGPT. Guidance about AGENTS.md is not a claim
+that ChatGPT directly wrote or modified that file.
+
+## 2026-10-08 - Confirmed student review and documentation correction
+
+Tool: Codex.
+Asked for: Update documentation to reflect the completed personal review and distinguish ChatGPT, Codex and student contributions; preserve functionality, scores and evidence, and do not commit or push without approval.
+Kept: The existing implementation, tests, harness, rubric scores and recorded evidence. Historical Codex sessions and commit references are preserved.
+Changed: Codex updated SELF_ASSESSMENT_REPORT.md with the confirmed Student Review, added the ChatGPT and personal-contribution records here, and removed outdated review-pending wording in README.md. AGENTS.md and the implementation, tests, package configuration, validation scripts and CI workflows were not changed.
+Rejected: None recorded. No student rejection or manual code change is invented.
+By hand: The student independently read the source, studied cartTotal's calculation logic, validation and error handling, reviewed test purposes, answered all 8 questions in docs/EXPLANATION.md, and confirmed the ability to explain the code and design decisions. The student also confirmed personally running the initial failing test and reviewing the results for acceptance.
+
+The student's initial test run is recorded from their confirmation. The existing
+evidence/initial-test.txt remains the transcript of Codex's separately recorded
+run; it is not presented as a capture of the student's own terminal session.
+No new CI run or independently administered oral review is claimed for this
+documentation update. Commit and push are awaiting the student's approval.
+
+Validation: Codex ran npm.cmd run check after reviewing the documentation diff.
+Format checks passed for 7 files; all 19 tests passed, with exit code 0. The
+score rows and evidence references are unchanged. Only AI-LOG.md, README.md
+and SELF_ASSESSMENT_REPORT.md changed; no commit or push was performed.
